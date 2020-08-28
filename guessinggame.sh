@@ -22,7 +22,6 @@ echo "Go on, make a guess!"
 
 read input
 count=$(ls -l | wc -l)
-echo  "$input | $count"
 check
 flag=$?
 echo $flag
