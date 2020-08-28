@@ -1,9 +1,17 @@
 #!/usr/bin/env bash
 #File guessinggame.sh
 
+function win {
+  printf '\n'
+  printf '(\ /)                                            (\ /)\n'
+  printf '( . .)  Congratulations!!! You guessed it right  ( . .)\n'
+  printf 'C(")(")                                          C(")(")\n\n'
+}
+
 function check {
   if [[ $input -eq $count ]]
   then
+    win
     return 0
   elif [[ $input -gt $count ]]
   then
