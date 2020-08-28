@@ -20,8 +20,11 @@ function check {
 echo "How many files are there in the current directory?"
 echo "Go on, make a guess!"
 
-read input
-count=$(ls -l | wc -l)
-check
-flag=$?
-echo $flag
+flag=1
+while [[ $flag -ne 0 ]]
+do
+  read input
+  count=$(ls -l | wc -l)
+  check
+  let flag=$?
+done
