@@ -7,12 +7,10 @@ function check {
     return 0
   elif [[ $input -gt $count ]]
   then
-    echo "You guessed too high"
-    echo "Try again"
+    echo "***You guessed too HIGH! Try again***"
     return 1
   else
-    echo "You guessed too low"
-    echo "Try again"
+    echo "***You guessed too LOW! Try again***"
     return 2
   fi
 }
